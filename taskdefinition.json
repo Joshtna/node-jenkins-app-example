@@ -1,16 +1,16 @@
 {
-  "containerDefinitions": [
+    "containerDefinitions": [
         {
             "name": "app",
             "image": "363254031734.dkr.ecr.ap-northeast-1.amazonaws.com/node-application:latest",
             "portMappings": [
-                { 
+                {
                     "containerPort": 3000,
                     "hostPort": 3000,
                     "protocol": "tcp"
                 }
-            ]
-          "logConfiguration": {
+            ],
+            "logConfiguration": {
                 "logDriver": "awslogs",
                 "options": {
                     "awslogs-create-group": "true",
@@ -18,7 +18,7 @@
                     "awslogs-region": "ap-northeast-1",
                     "awslogs-stream-prefix": "ecs"
                 }
-            },
+            }
         }
     ],
     "family": "cluster-family",
